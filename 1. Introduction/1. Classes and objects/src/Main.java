@@ -44,11 +44,19 @@ public class Main {
         System.out.println(Arrays.toString(students));
 
 
-//        garbage collector
-        A obj = new A("tmp");
-        for(int i =0; i<1e7; i++){
-            obj = new A("");
-        }
+        // we cannot change the reference of final variables,
+        // but
+        final A obj2 = new A("final1");
+        obj2.printName();;
+        obj2.name = "final2";
+        obj2.printName();
+
+        //        garbage collector invoke automitcally
+//        A obj = new A("tmp");
+//        for(int i =0; i<1e7; i++){
+//            obj = new A("");
+//        }
+
     }
 }
 
@@ -61,6 +69,10 @@ class A{
     @Override
     protected void finalize() throws Throwable{
         System.out.println("object is destroyed");
+    }
+
+    public void printName(){
+        System.out.println("This is objects name " + this.name);
     }
 }
 
