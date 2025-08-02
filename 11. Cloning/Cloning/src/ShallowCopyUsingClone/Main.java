@@ -9,7 +9,7 @@ public class Main {
         twin.age = 45;
         twin.name = "harish";
         // primitve are changeable, inner objects are not changeable in shallow copy
-        twin.arr[0] = 1;
+        twin.arr[0] = 100;
         System.out.println(kunal.age + " " + kunal.name + " " + kunal.arr[0]);
         System.out.println(twin.age + " " + twin.name + " " + twin.arr[0]);
 

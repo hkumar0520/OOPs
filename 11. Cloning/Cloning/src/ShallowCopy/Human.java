@@ -11,6 +11,4 @@ public class Human {
         this.name = name;
         this.arr = new int[]{1, 2, 3};
     }
-
-
 }

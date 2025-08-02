@@ -6,9 +6,18 @@ public class NumbersCompileTime {
         return a + b;
     }
 
+    double sum(int a , double b){
+        return a + b;
+    }
+
     double sum(int a, int b){
         return a + b;
     }
+
+    // method overloading, parameters list or type should  be different
+//    int sum(int a, int b){
+//        return a + b;
+//    }
 
     int sum(int a, int b, int c){
         return a + b + c;
